@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_143" data-name="Rectangle 143" width="22" height="22" transform="translate(35 468)" fill="#fff" opacity="0.3"/>
+    </clipPath>
+  </defs>
+  <g id="accuracy-icon" transform="translate(-35 -468)" clip-path="url(#clip-path)">
+    <g id="focus_1_" data-name="focus (1)" transform="translate(36 469)">
+      <path id="Path_110" data-name="Path 110" d="M.46,6.784a.46.46,0,0,0,.46-.46V2.3A1.383,1.383,0,0,1,2.3.921h4.02a.46.46,0,0,0,0-.921H2.3A2.3,2.3,0,0,0,0,2.3v4.02A.46.46,0,0,0,.46,6.784Zm0,0" transform="translate(0 0)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+      <path id="Path_111" data-name="Path 111" d="M277.168,0h-4.02a.46.46,0,0,0,0,.921h4.02A1.383,1.383,0,0,1,278.55,2.3v4.02a.46.46,0,1,0,.921,0V2.3A2.3,2.3,0,0,0,277.168,0Zm0,0" transform="translate(-260.131)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+      <path id="Path_112" data-name="Path 112" d="M279.01,272.688a.46.46,0,0,0-.46.46v4.02a1.383,1.383,0,0,1-1.381,1.381h-4.02a.46.46,0,0,0,0,.921h4.02a2.3,2.3,0,0,0,2.3-2.3v-4.02A.46.46,0,0,0,279.01,272.688Zm0,0" transform="translate(-260.131 -260.132)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+      <path id="Path_113" data-name="Path 113" d="M6.323,278.55H2.3a1.383,1.383,0,0,1-1.381-1.381v-4.02a.46.46,0,0,0-.921,0v4.02a2.3,2.3,0,0,0,2.3,2.3h4.02a.46.46,0,1,0,0-.921Zm0,0" transform="translate(0 -260.131)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+      <path id="Path_114" data-name="Path 114" d="M134.965,131.344a3.622,3.622,0,1,0,3.622,3.622A3.622,3.622,0,0,0,134.965,131.344Zm0,6.323a2.7,2.7,0,1,1,2.7-2.7A2.7,2.7,0,0,1,134.965,137.667Zm0,0" transform="translate(-125.296 -125.296)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+    </g>
+  </g>
+</svg>

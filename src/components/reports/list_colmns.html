@@ -1,0 +1,216 @@
+<tr className='item-step1'>
+<td className=''>
+  <span>{e1.type_name != '' ? e1.type_name : ''}</span>
+</td>
+
+{/* <td className='Metakey'>
+  <span>{e1.meta_key != '' ? e1.meta_key : ''}</span>
+</td> */}
+<td className='customer_id'>
+  <span>{e1.customer_id != '' ? e1.customer_id : ''}</span>
+</td>
+<td className='Customeremail'>
+	
+  <span>{e1.email != '' ? e1.email : ''}</span>
+</td>
+<td className='Companyname'>
+  <span>{e1.address != '' ? e1.address : ''}</span>
+</td>
+<td className='Companyaddress'>
+   {/* {alert(e1.company_address)}  */}
+  <span>{e1.vendor_name != '' ? e1.vendor_name : ''}</span>
+</td>
+
+<td className='Invoicedate'>
+  <span>{e1.invoice_date!='' && e1.invoice_date!=undefined?moment(e1.invoice_date).format('YYYY-MM-DD'):''}</span>
+</td>
+{/* <td className='Customername'>
+  <span>{e1.customer_name != '' ? e1.customer_name : ''}</span>
+</td>
+<td className='jobname'>
+  <span>{e1.jobname != '' ? e1.jobname : ''}</span>
+</td>
+<td className='customer_address'>
+  <span>
+	{e1.customer_address != '' ? e1.customer_address : ''}
+  </span>
+</td> */}
+<td className='customer_phone'>
+  <span>{e1.phone != '' ? e1.phone : ''}</span>
+</td>
+<td className='Memo'>
+  <span>{e1.memo != '' ? e1.memo : ''}</span>
+</td>
+{/* <td className='Itemtotalhomecurrency'>
+  <span>
+	{e1.item_total_home_currency != ''
+	  ? e1.item_total_home_currency
+	  : ''}
+  </span>
+</td>
+<td className='Taxamounthomecurrency'>
+  <span>
+	{e1.tax_amount_home_currency != ''
+	  ? e1.tax_amount_home_currency
+	  : ''}
+  </span>
+</td>
+<td className='Grandtotalhomecurrency'>
+  <span>
+	{e1.grand_total_home_currency != ''
+	  ? e1.grand_total_home_currency
+	  : ''}
+  </span>
+</td> */}
+
+
+
+<td className='Foreigncurrency'>
+  <span>
+	{e1.foreign_currency != '' ? e1.foreign_currency : ''}
+  </span>
+</td>
+<td className='Exchangerate'>
+  <span>{e1.exchange_rate}</span>
+</td>
+<td className='Duedate'>
+  <span> {e1.due_date!='' && e1.due_date!=undefined?moment(e1.due_date).format('YYYY-MM-DD'):''}</span>
+</td>
+<td className='Termsconditions'>
+<span>{e1.terms}</span>
+</td>
+
+
+<td className='Invoicenumber'>
+  <span>{e1.invoice_number}</span>
+</td>
+<td className='Shippingaddress'>
+  <span>{e1.address}</span>
+</td>
+<td className='credit'>
+  <span>{e1.credit}</span>
+</td>
+
+<td className='debit'>
+  <span>
+	{e1.debit != ''
+	  ? e1.debit
+	  : ''}
+  </span>
+</td>
+<td className='Grandforeigncurrency'>
+  <span>{e1.open_balance_home_currency != undefined ?e1.open_balance_home_currency:''}</span>
+</td>
+</tr>
+<tr></tr>
+
+
+//second modified
+<tr className='item-step1'>
+  <td className='Type'>
+    <span>{i2.type_name != '' ? i2.type_name : ''}</span>
+  </td>
+
+  {/* <td className='Metakey'>
+    <span>{i2.meta_key != '' ? i2.meta_key : ''}</span>
+  </td> */}
+  <td className='customer_id'>
+    <span>{i2.customer_id != '' ? i2.customer_id : ''}</span>
+  </td>
+  <td className='Customeremail'>
+    <span>{i2.email != '' ? i2.email : ''}</span>
+  </td>
+  <td className='Companyname'>
+    <span>{i2.address != '' ? i2.address : ''}</span>
+  </td>
+  {/* <td className='Companyaddress'>
+    <span>{i2.company_address != '' ? i2.company_address : ''}jktyuktttjgh</span>
+  </td> */}
+       <td className='Companyaddress'>
+    <span>{i2.vendor_name != '' ?i2.vendor_name : ''}</span>
+  </td>
+
+  <td className='Invoicedate'>
+    <span>{i2.invoice_date!='' && i2.invoice_date!=undefined?moment(i2.invoice_date).format('YYYY-MM-DD'):''}</span>
+  </td>
+  {/* <td className='Customername'>
+    <span>{i2.customer_name != '' ? i2.customer_name : ''}</span>
+  </td>
+  <td className='jobname'>
+    <span>{i2.jobname != '' ? i2.jobname : ''}</span>
+  </td>
+  <td className='customer_address'>
+    <span>
+      {i2.customer_address != '' ? i2.customer_address : ''}
+    </span>
+  </td> */}
+  <td className='customer_phone'>
+    <span>{i2.phone != '' ? i2.phone : ''}</span>
+  </td>
+  <td className='Memo'>
+    <span>{i2.memo != '' ? i2.memo : ''}</span>
+  </td>
+  {/* <td className='Itemtotalhomecurrency'>
+    <span>
+      {i2.item_total_home_currency != ''
+        ? i2.item_total_home_currency
+        : ''}
+    </span>
+  </td>
+  <td className='Taxamounthomecurrency'>
+    <span>
+      {i2.tax_amount_home_currency != ''
+        ? i2.tax_amount_home_currency
+        : ''}
+    </span>
+  </td>
+  <td className='Grandtotalhomecurrency'>
+    <span>
+      {i2.grand_total_home_currency != ''
+        ? i2.grand_total_home_currency
+        : ''}
+    </span>
+  </td> */}
+  <td className='Foreigncurrency'>
+    <span>
+      {i2.foreign_currency != '' ? i2.foreign_currency : ''}
+    </span>
+  </td>
+  <td className='Exchangerate'>
+    <span>{i2.exchange_rate}</span>
+  </td>
+  <td className='Duedate'>
+    <span>{i2.due_date!='' && i2.due_date!=undefined?moment(i2.due_date).format('YYYY-MM-DD'):''}</span>
+  </td>
+  <td className='Termsconditions'>
+    <span>{i2.terms}</span>
+  </td>
+  <td className='Invoicenumber'>
+    <span>{i2.invoice_number}</span>
+  </td>
+  <td className='Shippingaddress'>
+    <span>{i2.address}</span>
+  </td>
+  <td className='credit'>
+    <span>{i2.credit}</span>
+  </td>
+
+  {/* <td className='Taxamountforeigncurrency'>
+    <span>
+      {i2.tax_amount_foreign_currency != ''
+        ? i2.open_balance_foreign_currency
+        : ''}
+    </span>
+  </td> */}
+   <td className='debit'>
+ <span>
+   {i2.debit != ''
+     ? i2.debit
+     : ''}
+ </span>
+</td>
+  <td className='Grandforeigncurrency'>
+    <span>{i2.open_balance_home_currency !=undefined?i2.open_balance_home_currency:''}</span>
+  </td>
+</tr>
+<tr></tr>

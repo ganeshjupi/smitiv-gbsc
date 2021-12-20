@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_141" data-name="Rectangle 141" width="22" height="22" transform="translate(35 567)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="cost-icon" transform="translate(-35 -567)" clip-path="url(#clip-path)">
+    <g id="dollar" transform="translate(34.949 567.563)">
+      <g id="Group_386" data-name="Group 386" transform="translate(8.32 5.232)">
+        <g id="Group_385" data-name="Group 385">
+          <path id="Path_115" data-name="Path 115" d="M181.682,118.046a1.309,1.309,0,1,1,1.309-1.309.461.461,0,1,0,.922,0,2.234,2.234,0,0,0-1.77-2.185v-.59a.461.461,0,1,0-.922,0v.59a2.232,2.232,0,0,0,.461,4.416,1.309,1.309,0,1,1-1.309,1.309.461.461,0,0,0-.922,0,2.229,2.229,0,0,0,1.77,2.18v.876a.461.461,0,1,0,.922,0v-.876a2.23,2.23,0,0,0-.461-4.411Z" transform="translate(-179.451 -113.501)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_388" data-name="Group 388" transform="translate(0.051 0)">
+        <g id="Group_387" data-name="Group 387" transform="translate(0 0)">
+          <path id="Path_116" data-name="Path 116" d="M18.014,3.116l-.037-.037A10.5,10.5,0,0,0,.051,10.5,10.509,10.509,0,1,0,18.014,3.116ZM10.551,20.083A9.581,9.581,0,1,1,20.13,10.5,9.592,9.592,0,0,1,10.551,20.083Z" transform="translate(-0.051 0)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_390" data-name="Group 390" transform="translate(2.512 2.461)">
+        <g id="Group_389" data-name="Group 389">
+          <path id="Path_117" data-name="Path 117" d="M61.49,53.4a8.039,8.039,0,1,0,8.039,8.039A8.046,8.046,0,0,0,61.49,53.4Zm0,15.156a7.117,7.117,0,1,1,7.117-7.117A7.127,7.127,0,0,1,61.49,68.557Z" transform="translate(-53.451 -53.401)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

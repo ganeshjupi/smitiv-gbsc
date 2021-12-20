@@ -1,0 +1,67 @@
+Additional Package Installation:
+-----------------------------------
+https://www.roytuts.com/react-rest-api-post-example/
+https://reactjs.org/docs/forms.html?no-cache=1
+
+Nohup start
+-----------
+sudo apt-get install screen  ===========> if you need install
+
+https://stackoverflow.com/questions/4797050/how-to-run-node-js-as-a-background-process-and-never-die
+
+
+React Imported Packages:
+===========================
+
+https://blog.cloudboost.io/creating-a-react-js-app-from-scratch-part-3-routing-basics-edfb4c10346d
+
+npm install --save react-router-dom
+
+npm install jquery --save
+
+
+Idle Timer
+-------------
+https://www.npmjs.com/package/react-idle-timer
+
+npm install react-idle-timer --save
+
+
+mCustomScrollbar
+-------------------
+npm install jquery-mousewheel
+npm install malihu-custom-scrollbar-plugin
+
+
+npm i react-horizontal-scroll-container
+
+
+Node Modules:
+===================
+npm install express
+
+npm install --save request
+
+============================
+
+NGINX Installation and Domain set steps:
+------------------------------------------
+https://www.codementor.io/marcoscasagrande/installing-express-nginx-app-on-ubuntu-18-04-with-ssl-using-certbot-pdt44g5gs
+
+
+FB Login:
+----------
+https://jslancer.com/blog/2017/11/27/facebook-google-login-react/
+
+
+
+$2y$07$AIwv38UMlrSTEwRYdK5pt.yBctN3MzACqDSjJwI766r7njmaE2nwm
+
+
+===============================
+
+
+Dynamic Meta Tags
+===================
+https://www.kapwing.com/blog/how-to-add-dynamic-meta-tags-server-side-with-create-react-app/
+

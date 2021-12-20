@@ -1,0 +1,454 @@
+<div
+                                     style="
+                                       color: #6a6a6a;
+                                       background: #fff;
+                                       min-height: 98%;
+                                       border: 1px solid #c7c7c7;
+                                       width: 95%;
+                                       margin: 0 auto;
+                                       font-size: 14px;
+                                       display: block;
+                                       overflow: hidden;
+                                     ">
+                                     <div style="float: left; width: 100%; padding: 25px; box-sizing: border-box">
+                                       <div
+                                       id="isLogo"
+                                         style="
+                                           float: left;
+                                           width: 35%;
+                                           height: 73px;
+                                           display: flex;
+                                           align-items: center;
+                                         "
+                                       >
+                                       <img id="image" style="max-width:100%;max-height:100%;" src="https:api.genie.com.sg/logo/logo_1622805572973.webp" alt="logo"/>
+                                       </div>
+                                       <div id="mobDiv" style="float: right; text-align: right; width: 42%"> 
+                                          <p id="isEntityName" style="margin-bottom: 0 ;display: block">[Entity name]</p>
+                                          <p id="isAddress" style="margin-bottom: 0 ;display: block">[Address]</p>  
+                                          <p id="isPhoneNumber" style="margin-bottom: 0 ;display: block">[Phone number]</p>
+                                          <p id="isEmail" style="margin-bottom: 0 ;display: block">[Email]</p>
+                                          <p id="isUenNumber" style="margin-bottom: 0 ;display: block">[UEN number]</p>
+                                          <p id="isGstNumber" style="margin-bottom: 0 ;display: block"></p>
+                                       </div>
+                                     </div>
+                                     <div id="stripeDiv" style="background: #e6e6e6; height: 18px; float: left; width: 100%">
+                                       <span
+                                       id="template_name"
+                                         style="
+                                           color: #6a6a6a;
+                                           background: #fff;
+                                           font-size: 20px;
+                                           font-weight: 600;
+                                           text-transform: uppercase;
+                                           float: right;
+                                           margin: -3px 25px 0 0;
+                                           padding: 0 18px;
+                                         "
+                                         >INVOICE</span
+                                       >
+                                     </div>
+                                     <div style="float: left; width: 100%; padding: 25px; box-sizing: border-box">
+                                       <div style="float: left">
+                                         <div style="float: left; width: 100%">
+                                         <div id="headDiv">
+                                           <div style="float: left; width: 33%">
+                                             <p style="margin-bottom: 8px; font-weight: 600">Invoice to</p>
+                                             <p>
+                                              <span id="p-company_address"> [company address] <span>
+                                             </p>
+                                           </div>
+                                           <div style="float: left; width: 33%">
+                                             <p style="margin-bottom: 8px; font-weight: 600">Shipping to</p>
+                                             <p>
+                                             <span id="p-shipping_address">[shipping address] <span>
+                                             </p>
+                                           </div>
+                                           <div style="float: right; width: 34%; text-align: right">
+                                             <p style="margin-bottom: 7px">
+                                               <span style="font-weight: 600">Invoice No:</span><span id="p-invoice_number">100230<span>
+                                             </p>
+                                             <p style="margin-bottom: 0">
+                                               <span style="font-weight: 600">Date:</span><span id="p-invoice_date">10 May 2021<span> 
+                                             </p>
+                                             <p style="margin-bottom: 0">
+                                               <span style="font-weight: 600">Duedate:</span> <span id="p-due_date">18 May 2021<span>
+                                             </p>
+                                           </div>
+                                           <div style="float: left; width: 100%">
+                                             <div style="float: left; width: 20%">
+                                               <p style="margin-bottom: 8px; font-weight: 600">Invoice Currency</p>
+                                               <p id="p-foreign_currency">[Your invoice currency]</p>
+                                             </div>
+                                             <div style="float: left; width: 20%">
+                                               <p style="margin-bottom: 8px; font-weight: 600">Job Name</p>
+                                               <p id="p-job_name">[Your job name]</p>
+                                             </div>
+                                             <div style="float: left; width: 20%">
+                                               <p style="margin-bottom: 8px; font-weight: 600">Memo</p>
+                                               <p id="p-memo">[Your memo]</p>
+                                             </div>
+                                             <div style="float: left; width: 20%" id="p-exchange_div">
+                                               <p style="margin-bottom: 8px; font-weight: 600">Exchange Rate</p>
+                                               <p id="p-exchange_rate">00.00</p>
+                                             </div>
+                                             <div style="float: left; width: 20%; display:none" id="customField0">
+                                             <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName0">Exchange Rate</p>
+                                             <p id="head-0">[Field value]</p>
+                                           </div>
+                                           <div style="float: left; width: 20%; display:none" id="customField1">
+                                           <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName1">Exchange Rate</p>
+                                           <p id="head-1">[Field value]</p>
+                                         </div>
+                                         <div style="float: left; width: 20%; display:none" id="customField2">
+                                         <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName2">Exchange Rate</p>
+                                         <p id="head-2">[Field value]</p>
+                                       </div>
+                                       <div style="float: left; width: 20%; display:none" id="customField3">
+                                       <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName3">Exchange Rate</p>
+                                       <p id="head-3">[Field value]</p>
+                                     </div>
+                                     <div style="float: left; width: 20%; display:none" id="customField4">
+                                     <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName4">Exchange Rate</p>
+                                     <p id="head-4">[Field value]</p>
+                                   </div>
+                                   <div style="float: left; width: 20%; display:none" id="customField5">
+                                   <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName5">Exchange Rate</p>
+                                   <p id="head-5">[Field value]</p>
+                                 </div>
+                                 <div style="float: left; width: 20%; display:none" id="customField6">
+                                 <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName6">Exchange Rate</p>
+                                 <p id="head-6">[Field value]</p>
+                               </div>
+                               <div style="float: left; width: 20%; display:none" id="customField7">
+                               <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName7">Exchange Rate</p>
+                               <p id="head-7">[Field value]</p>
+                             </div>
+                             <div style="float: left; width: 20%; display:none" id="customField8">
+                             <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName8">Exchange Rate</p>
+                             <p id="head-8">[Field value]</p>
+                           </div>
+                           <div style="float: left; width: 20%; display:none" id="customField9">
+                           <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName9">Exchange Rate</p>
+                           <p id="head-9">[Field value]</p>
+                         </div>
+                                           </div>
+                                         </div>
+                                         <div id="itemDiv">
+                                           <div style="width: 100%; float: left; min-height: 58.2%">
+                                             <table style="width: 100%; float: left; margin-top: 25px">
+                                               <thead id="thead" style="background: #5e5e5e; border: 1px solid #5e5e5e">
+                                                 <tr style="color: #fff; font-weight: 500">
+                                                   <td style="padding: 12px 8px; box-sizing: border-box">No</td>
+                                                   <td style="padding: 12px 8px; box-sizing: border-box">
+                                                     Item & Description
+                                                   </td>
+                                                   <td style="padding: 12px 8px; box-sizing: border-box">
+                                                     Price Each
+                                                   </td>
+                                                   <td
+                                                     style="
+                                                       padding: 12px 8px;
+                                                       text-align: center;
+                                                       box-sizing: border-box;
+                                                     "
+                                                   >
+                                                     Qty
+                                                   </td>
+                                                
+                                                   <td
+                                                     style="
+                                                       padding: 12px 8px;
+                                                       text-align: center;
+                                                       box-sizing: border-box;
+                                                     "
+                                                   >
+                                                     Tax
+                                                   </td>                   
+                                                   <td
+                                                     style="
+                                                       padding: 12px 8px;
+                                                       text-align: center;
+                                                       box-sizing: border-box;
+                                                     "
+                                                   >
+                                                     Total
+                                                   </td>
+                                                 </tr>
+                                               </thead>
+                                               <tbody style="border: 1px solid #bababa">
+                                                   <tr id="row-1" style="display:table-row">
+                                                   <td id="row-1-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-1-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-1-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-1-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-1-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-1-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-2" style="display:table-row">
+                                                   <td id="row-2-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-2-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-2-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-2-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-2-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-2-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-3" style="display:table-row">
+                                                   <td id="row-3-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-3-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-3-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-3-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-3-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-3-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-4" style="display:none">
+                                                   <td id="row-4-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-4-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-4-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-4-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-4-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-4-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-5" style="display:none">
+                                                   <td id="row-5-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-5-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-5-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-5-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-5-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-5-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-6" style="display:none">
+                                                   <td id="row-6-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-6-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-6-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-6-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-6-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-6-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-7" style="display:none">
+                                                   <td id="row-7-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-7-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-7-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-7-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-7-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-7-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-8" style="display:none">
+                                                   <td id="row-8-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-8-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-8-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-8-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-8-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-8-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-9" style="display:none">
+                                                   <td id="row-9-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-9-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-9-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-9-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-9-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-9-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>
+                                                   <tr id="row-10" style="display:none">
+                                                   <td id="row-10-1" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">01</td>
+                                                   <td id="row-10-2" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">Lorem ipsum dolor sit amet</td>
+                                                   <td id="row-10-3" style="font-size:13px;padding:12px 8px;box-sizing:border-box;">00.00</td>
+                                                   <td id="row-10-4" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00</td>
+                                                   <td id="row-10-5" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">0.0%</td>
+                                                   <td id="row-10-6" style="font-size:13px;padding:12px 8px;text-align:center;box-sizing:border-box;">00.00</td>
+                                                   </tr>        
+                                               </tbody>
+                                             </table>
+                                           </div>
+                                           <div style="float: left; width: 65%; margin-top: 60px">
+                                             <p style="margin-bottom: 5px; font-weight: 500">Amount in Words</p>
+                                             <div
+                                             id="p-amount_in_words"
+                                               style="
+                                                 border: 1px solid #bababa;
+                                                 float: left;
+                                                 width: 100%;
+                                                 padding: 13px 10px;
+                                                 box-sizing: border-box;
+                                               "
+                                             >
+                                             Amount in Words
+                                             </div>
+                                           </div>
+                                           <div
+                                             style="
+                                               float: right;
+                                               width: 35%;
+                                               padding-left: 20px;
+                                               box-sizing: border-box;
+                                             "
+                                           >
+                                             <div
+                                               style="
+                                                 float: left;
+                                                 width: 100%;
+                                                 padding: 13px 10px;
+                                                 margin-top: 10px;
+                                                 box-sizing: border-box;
+                                               "
+                                             >
+                                               <div
+                                                 style="
+                                                   float: left;
+                                                   width: 50%;
+                                                   font-weight: 600;
+                                                   text-align: right;
+                                                   padding-right: 10px;
+                                                   box-sizing: border-box;
+                                                 "
+                                               >
+                                                 Sub total 
+                                               </div>
+                                               <div
+                                               id = "p-item_total_foreign_currency"
+                                                 style="
+                                                   text-align: right;
+                                                   padding: 0 10px;
+                                                   float: right;
+                                                   width: 50%;
+                                                   box-sizing: border-box;
+                                                 "
+                                               >
+                                               0.00
+                                               </div>
+                                             </div>
+                                             <div
+                                               style="
+                                                 float: left;
+                                                 width: 100%;
+                                                 padding: 13px 10px;
+                                                 box-sizing: border-box;
+                                               "
+                                             >
+                                               <div
+                                                 style="
+                                                   float: left;
+                                                   width: 50%;
+                                                   font-weight: 600;
+                                                   text-align: right;
+                                                   padding-right: 10px;
+                                                   box-sizing: border-box;
+                                                 "
+                                               >
+                                               Tax
+                                               </div>
+                                               <div
+                                               id = "p-tax_amount_foreign_currency"
+                                                 style="
+                                                   text-align: right;
+                                                   padding: 0 10px;
+                                                   float: right;
+                                                   width: 50%;
+                                                   box-sizing: border-box;
+                                                 "
+                                               >
+                                               0.00
+                                               </div>
+                                             </div>
+                                             <div
+                                               style="
+                                                 float: left;
+                                                 width: 100%;
+                                                 padding: 15px 10px;
+                                                 background: #efefef;
+                                                 border-radius: 3px;
+                                                 box-sizing: border-box;
+                                               "
+                                             >
+                                               <div
+                                                 style="
+                                                   float: left;
+                                                   width: 50%;
+                                                   font-weight: 600;
+                                                   text-align: right;
+                                                   padding-right: 10px;
+                                                   box-sizing: border-box;
+                                                 "
+                                               >
+                                                 Grand Total
+                                               </div>
+                                               <div
+                                               id = "p-grand_total_foreign_currency"
+                                                 style="
+                                                   text-align: right;
+                                                   padding: 0 10px;
+                                                   float: right;
+                                                   width: 50%;
+                                                   box-sizing: border-box;
+                                                 "
+                                               >
+                                                 0.00
+                                               </div>
+                                             </div>
+                                           </div>
+                                           </div>
+                                         </div>
+                         <div id="footerCustomDiv">
+                                         <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField10">
+                                             <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName10">Footer field-1</p>
+                                             <p id="foot-0">[Field value]</p>
+                                           </div>
+                                           <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField11">
+                                           <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName11">Footer field-2</p>
+                                           <p id="foot-1">[Field value]</p>
+                                         </div>
+                                         <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField12">
+                                         <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName12">Footer field-3</p>
+                                         <p id="foot-2">[Field value]</p>
+                                       </div>
+                                       <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField13">
+                                       <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName13">Footer field-3</p>
+                                       <p id="foot-3">[Field value]</p>
+                                     </div>
+                                     <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField14">
+                                     <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName14">Footer field-4</p>
+                                     <p id="foot-4">[Field value]</p>
+                                   </div>
+                                   <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField15">
+                                   <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName15">Footer field-5</p>
+                                   <p id="foot-5">[Field value]</p>
+                                 </div>
+                                 <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField16">
+                                 <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName16">Footer field-6</p>
+                                 <p id="foot-6">[Field value]</p>
+                               </div>
+                               <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField17">
+                               <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName17">Footer field-7</p>
+                               <p id="foot-7">[Field value]</p>
+                             </div>
+                             <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField18">
+                             <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName18">Footer field-8</p>
+                             <p id="foot-8">[Field value]</p>
+                           </div>
+                           <div style="float: left; width: 20%; display:none ; margin-top: 25px" id="customField19">
+                           <p style="margin-bottom: 8px; font-weight: 600" id="customFieldName19">Footer field-9</p>
+                           <p id="foot-9">[Field value]</p>
+                         </div>
+                         </div> <div id="footerDiv"
+                                           style="
+                                             float: left;
+                                             width: 100%;
+                                             margin-top: 30px;
+                                             padding: 0 0 25px 0;
+                                             box-sizing: border-box;
+                                           "
+                                            >
+                                           <p style="margin-bottom: 5px; font-weight: bold">Thank you message and Banking details</p>
+                                           <p id="p-thanking_message" style="margin-top: 0; margin-bottom: 15px">Thank you message and Banking details</p>
+                                           <div style="float: left; width: 100%">
+                                             <p style="margin-bottom: 7px; font-weight: 600">Terms & Conditions</p>
+                                             <p id="p-terms_and_conditions" style="font-size: 12px; margin-bottom: 0">
+                                               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                                               quae ab illo inventore
+                                             </p>
+                                           </div>
+                                         </div>
+                                       </div>
+                                     </div>
+                                   </div>

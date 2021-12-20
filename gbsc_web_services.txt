@@ -1,0 +1,1607 @@
+Authorization header: 
+---------------------
+
+Authorization:O5mGIP3VNia0JvPH2IBiwA==
+
+GBSC Web Services:
+1. Register new company
+
+API Path:
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/register_new_company
+
+Post values:
+
+{"entity_name":"DAR technoligies",
+"address":"third street",
+"state":"Tamilnadu",
+"country":"India",
+"email":"sakthi@mailinator.com",
+"phone":"9845454521",
+"home_currency":"INR",
+"country_code":"+91",
+"entity_number":"WQ232323",
+"entity_type":1,
+"incorporation_date":"2019-01-01",
+"principle_activities":"Testing",
+"first_name":"sundar",
+"last_name":"raj",
+"company_email":["sasi9@rgmobiles.com"],
+"company_phone":["4545478787455","78787878787"],
+"password":12345678,
+   "plan_id":1,
+   "subscription_start_date":"2019-11-01",
+   "subscription_end_date":"2019-11-30"
+}
+
+Response:
+{ 
+    status: 1, 
+    message: 'Company registration completed successfully. Your credentials are sent to your mail ID' 
+}
+======================================================================
+
+2. User login
+
+API Path:
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/login
+
+Post values:
+
+email_id:sakthi@rgmobiles.com
+password:LvRHNjpv
+
+Response:
+
+Success:
+{
+    "status": 1,
+    "message": "Logged in Successfully",
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzM1NTY3ODcsImV4cCI6MTU3MzY0MzE4N30.aIapx4lQMSjxdDsSPGxkFEAMVjezUghrVvNkN2-5Wus",
+    "user_id": 29,
+    "client_id": 1,
+    "role_id": 2,
+    "user_name": "Sakthikumar",
+    "email": "svel493@gmail.com",
+    "phone": "8989845544",
+    "user_image": "",
+    "company_name": "ABC company",
+    "subscription_start_date": "2019-10-10",
+    "subscription_end_date": "2019-11-10",
+    "plan_id": 1
+}
+----------------------------------------------------------
+Failure:
+{
+    "status": 0,
+    "message": "Incorrect username or password"
+}
+=======================================================================
+
+3. Update company profile
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/update_company_profile
+
+Post values:
+
+name*:SRT technoligies
+address*:5645, gbv towers
+city*:Coimbatore
+country*:India
+zipcode*:641667
+phone*:23232323
+country_code*:+91
+client_id*:13
+state:Tamilnadu
+
+Response:
+
+{
+    "status": 1,
+    "message": "Company profile updated successfully"
+}
+=======================================================================
+4. Forgot password
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/forgot_password
+
+Post values:
+email_id:svel493@gmail.com
+
+Response:
+
+Success:
+{
+    "status": 1,
+    "message": "New password is sent to your email ID"
+}
+
+Failure:
+{
+    "status": 0,
+    "message": "Email ID not found"
+}
+=====================================================================
+5. Add new account name
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/add_new_account_name
+
+Post values:
+
+account_name:test
+account_type_id:11
+
+Response:
+
+{
+    "status": 1,
+    "message": "New account name successfully"
+}
+====================================================================
+
+
+7. Sub category list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/sub_category_list
+
+Post values:
+
+category_id:22
+
+Response:
+
+{
+    "status": 1,
+    "message": "Sub category list fetched successfully",
+    "list": [
+        {
+            "id": 23,
+            "category_name": "Delayed payments",
+            "parent_id": 22
+        }
+    ]
+}
+======================================================================
+
+8. Save new document
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/save_new_document
+
+Post values:(Form data)
+
+client_id:1
+user_id:17
+title:test 100
+description:This is to test 100
+attachments:Files to be attached here...
+
+Response:
+
+{
+    "status": 1,
+    "message": "New document saved successfully"
+}
+===================================================================
+
+14. Add new subscription plan
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/add_new_plan
+
+Post values:
+
+name:It's "new"
+description:Testing plan description's "quote"
+price_per_year:500
+currency:SGD
+
+Response:
+
+{
+    "status": 1,
+    "message": "New subscription plan added successfully"
+}
+=============================================================
+
+15. Update subscription plan
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/update_plan
+
+Post values:
+
+name:It's "new plan" for user's
+description:Testing's  plan description's "quotes"
+price_per_year:600
+currency:USD
+plan_id:5
+
+Response:
+
+{
+    "status": 1,
+    "message": "Subscription plan updated successfully"
+}
+
+==============================================================
+
+16. List out subscription plans
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_plan_list
+
+Response:
+
+{
+    "status": 1,
+    "message": "Subscription plan list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "Genie with accountant",
+            "description": "Clients using Genie software and also the GBSC's accountant also",
+            "price_per_year": 1000,
+            "currency": "USD"
+        }
+    ]
+}
+==============================================================
+
+17. Remove subscription plan
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/remove_subscription_plan
+
+Post values:
+plan_id:6
+
+Response:
+
+{
+    "status": 1,
+    "message": "Subscription plan removed successfully"
+}
+=============================================================
+
+18. Subscribe a plan
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/subscribe_plan
+
+post values:
+
+end_date:2019-09-30
+start_date:2019-09-01
+plan_id:1
+client_id:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Successfully subscribed for a plan"
+}
+===========================================================
+
+
+
+25. Sent items of specific client
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/sent_items
+
+Post values:
+
+client_id:1
+page:2
+limit:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Sent item list fetched successfully",
+    "list": [
+        {
+            "unresolved_comment": 0,
+            "id": 34,
+            "client_id": 1,
+            "user_id": 17,
+            "status": 5,
+            "title": "Furniture Expense",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing  elid sed to eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "attachment_count": 1,
+            "client_name": "ABC company",
+            "user_name": "Sakthi",
+            "user_image": "http://graph.facebook.com/1213219502191779/picture?type=large",
+            "file_id": "34",
+            "ago_value": "20 hours ago",
+            "status_message": "Reviewed",
+            "client_code": "ABC-01",
+            "file_path": [
+                "http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/documents/2019-10-24/1571907446272-sample-(13).pdf"
+            ],
+            "attachments": [
+                "34"
+            ]
+        }
+    ]
+}
+
+=============================================================
+
+26. get entity types
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_entity_types ----GET Method 
+
+
+Response:
+
+{
+    "status": 1,
+    "message": "Entity list fectched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "Sole proprietor"
+        },
+        {
+            "id": 2,
+            "name": "Corporation, one or more shareholders"
+        },
+        {
+            "id": 3,
+            "name": "Small business corporation, two or more owner"
+        },
+        {
+            "id": 4,
+            "name": "Partnership"
+        },
+        {
+            "id": 5,
+            "name": "Limited partnership"
+        },
+        {
+            "id": 6,
+            "name": "Limited liability partnership"
+        },
+        {
+            "id": 7,
+            "name": "Others "
+        }
+    ]
+}
+
+=========================================================================================
+
+27. Get country list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_countries -------GET Method
+
+Response:
+
+{
+    "status": 1,
+    "message": "Country list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "Afghanistan",
+            "phonecode": 93
+        },
+        {
+            "id": 2,
+            "name": "Albania",
+            "phonecode": 355
+        },
+        {
+            "id": 3,
+            "name": "Algeria",
+            "phonecode": 213
+        },
+        {
+            "id": 4,
+            "name": "American Samoa",
+            "phonecode": 1684
+        },
+        {
+            "id": 5,
+            "name": "Andorra",
+            "phonecode": 376
+        },
+        {
+            "id": 6,
+            "name": "Angola",
+            "phonecode": 244
+        },
+        {
+            "id": 7,
+            "name": "Anguilla",
+            "phonecode": 1264
+        },
+        {
+            "id": 8,
+            "name": "Antarctica",
+            "phonecode": 0
+        },
+        {
+            "id": 9,
+            "name": "Antigua And Barbuda",
+            "phonecode": 1268
+        }
+]
+}
+=================================================
+
+28. Get state list by country
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_states
+
+Post values:
+
+country_id:101
+
+Response:
+
+{
+    "status": 1,
+    "message": "State list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "Andaman and Nicobar Islands",
+            "country_id": 101
+        },
+        {
+            "id": 2,
+            "name": "Andhra Pradesh",
+            "country_id": 101
+        },
+        {
+            "id": 3,
+            "name": "Arunachal Pradesh",
+            "country_id": 101
+        },
+        {
+            "id": 4,
+            "name": "Assam",
+            "country_id": 101
+        },
+        {
+            "id": 5,
+            "name": "Bihar",
+            "country_id": 101
+        },
+        {
+            "id": 6,
+            "name": "Chandigarh",
+            "country_id": 101
+        },
+        {
+            "id": 7,
+            "name": "Chhattisgarh",
+            "country_id": 101
+        },
+        {
+            "id": 8,
+            "name": "Dadra and Nagar Haveli",
+            "country_id": 101
+        },
+        {
+            "id": 9,
+            "name": "Daman and Diu",
+            "country_id": 101
+        },
+        {
+            "id": 10,
+            "name": "Delhi",
+            "country_id": 101
+        }
+]
+ }
+
+===========================================================================
+
+29. Get user role list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_user_role_list --- GET Method
+
+Response:
+
+{
+    "status": 1,
+    "message": "User role list fectched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "Super Admin",
+            "permissions": [1,2,3,4,5,6,7,8,9,10,11,12,13]
+        },
+        {
+            "id": 2,
+            "name": "Admin",
+            "permissions": [1,2,3,4,5,6,7,8,11]
+        }
+    ]
+}
+
+==============================================================================================
+
+30. Add new user role
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/add_new_user_role
+
+Post values:
+{ 
+"role_name":"test role1",
+
+"permissions":[
+1]
+
+}
+
+Response:
+
+{
+    "status": 1,
+    "message": "New role added successfully"
+}
+===============================================================================================
+
+31. Edit user role
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/edit_user_role
+
+Post values:
+
+{
+ 
+"role_id":9,
+
+"role_name":"test role3",
+
+"permissions":[
+	 1,2,3
+ 	]
+
+}
+
+Response: 
+{
+    "status": 1,
+    "message": "User role updated successfully"
+}
+
+===============================================================================================
+
+32. Add new entity
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/add_new_entity
+
+Post values:
+
+entity_name:test entity
+
+
+Response:
+
+{
+    "status": 1,
+    "message": "New entity added successfully"
+}
+
+===============================================================================================
+
+
+39) Add new invoice template
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/add_new_invoice_template
+
+Post values:
+
+{ "template_name":"template 5",
+  "client_id":1,
+  "is_default":1,
+  "properties":
+	{
+	    "name":"test"
+	},
+	"html_content":"<html></html>"
+}
+
+Response:
+
+{
+    "status": 1,
+    "message": "New invoice template added successfully"
+}
+
+=====================================================================
+
+40) Invoice template list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/invoice_template_list
+
+Post values:
+
+client_id:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice template list fecthed successfully",
+    "default_template_id": 3,
+    "list": [
+        {
+            "id": 1,
+            "template_name": "temp1",
+            "type": 1,
+            "html_content": "<html></html>",
+            "is_default": 1,
+            "created_on": "2019-12-24T06:11:01.000Z",
+            "client_id": 1,
+            "properties": ""
+        },
+        {
+            "id": 2,
+            "template_name": "temp1",
+            "type": 1,
+            "html_content": "<html></html>",
+            "is_default": 0,
+            "created_on": "2019-12-24T06:11:25.000Z",
+            "client_id": 1,
+            "properties": ""
+        },
+        {
+            "id": 7,
+            "template_name": "temp1",
+            "type": 1,
+            "html_content": "<html></html>",
+            "is_default": 0,
+            "created_on": "2019-12-24T08:44:21.000Z",
+            "client_id": 1,
+            "properties": ""
+        },
+        {
+            "id": 9,
+            "template_name": "template 5",
+            "type": 1,
+            "html_content": "<html></html>",
+            "is_default": 1,
+            "created_on": "2020-01-08T05:45:03.000Z",
+            "client_id": 1,
+            "properties": {
+                "name": "test"
+            }
+        }
+    ]
+}
+
+========================================================================
+
+
+41) Set/reset default invoice template
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/set_default_invoice_template
+
+Post values:
+
+client_id:1
+template_id:1
+is_default:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Default template modified"
+}
+
+=======================================================================
+
+42) Delete invoice template
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/remove_invoice_template
+
+Post values:
+
+client_id:1
+template_id:3
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice template deleted successfully"
+}
+
+=========================================================================
+
+43) Get template path
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_template_path
+
+Post values:
+
+template_id:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice template details fetched successfully",
+    "details": {
+        "id": 1,
+        "template_name": "temp1",
+        "file_path": "test_path"
+    }
+}
+
+=========================================================================
+
+44) Update invoice template list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/edit_invoice_template
+
+Post values:
+
+client_id:1
+template_id:10
+template_name:Template 1
+properties:{}
+html_content:-
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice template updated successfully"
+}
+
+=========================================================================
+
+45) Duplicate invoice template
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/duplicate_invoice_template
+
+Post values:
+
+client_id:1
+template_id:9
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice template duplicated successfully"
+}
+
+===========================================================================
+
+46) Invoice template details
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/invoice_template_details
+
+Post values:
+
+template_id:2
+
+Response:
+
+
+{
+    "status": 1,
+    "message": "Invoice template details fecthed successfully",
+    "details": {
+        "id": 2,
+        "template_name": "Template 1",
+        "type": 1,
+        "html_content": "",
+        "is_default": 0,
+        "created_on": "2020-01-09T10:31:26.000Z",
+        "client_id": 0,
+        "properties": ""
+    }
+}
+
+===========================================================================
+
+47) Customer list for create invoice
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/customer_list
+
+Post values:
+
+client_id:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Customer list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "Customer A",
+            "address": "First street",
+            "country": "India",
+            "email": "cusa@gmail.com",
+            "phone": "2356897854",
+            "status": 1,
+            "client_id": 1,
+            "city": "Coimbatore",
+            "state": "Tamilnadu",
+            "postal_code": 641667,
+            "currency": "INR"
+        }
+    ]
+}
+
+=============================================================================
+
+Source module APIs:
+
+1. Category list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/category_list
+
+Response:
+
+{
+    "status": 1,
+    "message": "Category list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "category_name": "Balance sheet",
+            "parent_id": 0
+        },
+        {
+            "id": 2,
+            "category_name": "Profit or loss",
+            "parent_id": 0
+        }
+    ]
+}
+======================================================================
+
+2. Inbox list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/inbox_list
+
+Post values:(Optional):
+
+page:1
+limit:10
+
+For filter by specific clients:
+client_id :1
+
+For specific client sender inbox:
+client_id :1
+status:3 (Commented items)
+
+For reviewed list:
+status:5
+
+
+Response:
+
+{
+    "status": 1,
+    "message": "Inbox document list fetched successfully",
+    "list": [
+        {
+            "unresolved_comment": 1,
+            "id": 29,
+            "client_id": 1,
+            "user_id": 17,
+            "status": 3,
+            "title": "Furniture Expense",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing  elid sed to eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "attachment_count": 2,
+            "client_name": "ABC company",
+            "user_name": "Sakthi",
+            "user_image": "http://graph.facebook.com/1213219502191779/picture?type=large",
+            "file_id": "1,2",
+            "ago_value": "14 days ago",
+            "status_message": "Waiting for response",
+            "client_code": "ABC-01",
+            "file_path": [
+                "http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/documents/2019-10-11/1570779914871-sample-(13).pdf",
+                "http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/documents/2019-10-11/1570779914916-image.png"
+            ],
+            "attachments": [
+                "1",
+                "2"
+            ]
+        }
+    ]
+}
+
+=====================================================================
+
+3. Save tagged item
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/save_tagged_item
+
+Post values:(json)
+
+  { 
+		"client_id" : 1,
+                "item_total_home_currency" : 2000,
+                "tax_amount_home_currency" : 500,
+                "grand_total_home_currency" : 2500,
+                "item_total_foreign_currency" : 3000,
+                "tax_amount_foreign_currency" : 750,
+                "grand_total_foreign_currency" : 3750,
+                "currency" :"usd" ,
+                "exchange_rate" :1.5,
+                "invoice_date" : "2019-08-25",
+                "company_name" : "GBZ technologies",
+                "type" : 1,
+                "invoice_number" : "0003",
+                "company_address" : "GBD towers, Sinagpore",
+                "list_id" : 102,
+                "tagged_user_id":33,
+                "item_list" : [
+                	{
+                    "item_name":"mobiles",
+                    "quantity":"1",
+                    "price":"800",
+                    "sub_total":"800"
+                },
+                {
+                    "item_name":"batteries",
+                    "quantity":"1",
+                    "price":"200",
+                     "sub_total":"200"
+                }
+                	]
+                }
+
+Response:
+
+{
+    "status": 1,
+    "message": "Tagged items saved successfully"
+}
+
+============================================================
+
+4. Update tagged item
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/update_tagged_item
+
+Post values:
+
+ { 		"client_id" : 1,
+                "item_total" : 3000,
+                "tax_amount" : 500,
+                "grand_total" : 3500,
+                "invoice_date" : "2019-08-25",
+                "company_name" : "GBZ technologies",
+                "type" : 1,
+                "invoice_number" : "0003",
+                "company_address" : "GBD towers, Sinagpore",
+                "list_id" : 18,
+                "tagged_user_id":33,
+                "item_list" : [
+                		{
+                    "item_name":"mobiles",
+                    "quantity":"2",
+                    "price":"1500",
+                    "sub_total":"3000"
+                },
+                {
+                    "item_name":"batteries",
+                    "quantity":"1",
+                    "price":"500",
+                     "sub_total":"500"
+                }]
+                }
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice saved successfully"
+}
+
+==============================================================
+
+5. Save tagged item draft
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/save_tagged_item_draft
+
+Post values:
+
+ { 		"client_id"* : 1,
+                "item_total" : 3000,
+                "tax_amount" : 500,
+                "grand_total" : 3500,
+                "invoice_date" : "2019-08-25",
+                "company_name" : "GBZ technologies",
+                "type" : 1,
+                "invoice_number" : "0003",
+                "company_address" : "GBD towers, Sinagpore",
+                "list_id"* : 18,
+                "tagged_user_id"*:33,
+                 "item_list" : [{
+                    "item_name":"Mobile",
+                    "quantity":"2",
+                    "price":"1400",
+                    "sub_total":"2800"
+                },
+                {
+                    "item_name":"Battery",
+                    "quantity":"2",
+                    "price":"100",
+                    "sub_total":"200"
+                }]
+                }
+Response:
+
+{
+    "status": 1,
+    "message": "Draft saved successfully"
+}
+============================================================
+
+6. Delete tagged item draft
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/delete_tagged_item_draft
+
+Post values:
+
+{
+    "status": 1,
+    "message": "Draft deleted successfully"
+}
+============================================================
+
+7. Add comment
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/add_comment
+
+Post values:(Form data)
+
+comment_text:Need clear explanation on first document page no 2
+user_id:33
+file_id:20
+parent_comment_id:0 ----while replying to comment send its parent comment id
+attachments:Choose files here
+
+Response:
+{
+    "status": 1,
+    "message": "Invoice comment added successfully"
+}
+===========================================================
+
+8. Update comment
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/update_comment
+
+Post values:
+
+comment_text:Need clear explanation on first document page no 45
+user_id:33
+comment_id:5
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice comment updated successfully"
+}
+==============================================================
+
+9. Delete comment
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/delete_comment
+
+Post values:
+
+comment_id:4
+list_id:29
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice comment deleted successfully"
+}
+==============================================================
+
+10. Resolve comment
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/resolve_comment
+
+Post values:
+
+comment_id:11
+list_id:20
+
+Response:
+{
+    "status": 1,
+    "message": "Invoice comment resolved successfully"
+}
+==============================================================
+
+11. Get item details
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_item_details
+
+Post values:
+
+list_id:23
+status:2
+client_id:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Item details fetched successfully",
+    "details": {
+        "id": 20,
+        "client_id": 1,
+        "user_id": 17,
+        "file_path": [
+            "http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/documents/2019-09-24/1569307179016-Screen-Shot CPF-2017-04-13-at-15.15.01.png",
+            "http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/documents/2019-09-24/1569307179017-image.png"
+        ],
+        "status": 4,
+        "title": "Tax payments",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing  elid sed to eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "attachment_count": 2,
+        "client_name": "ABC company",
+        "user_name": "Sakthi",
+        "user_image": "http://graph.facebook.com/1213219502191779/picture?type=large",
+        "ago_value": "17 days ago",
+        "date": "06:39 - 24 Sep",
+        "status_message": "Re-assigned",
+        "client_code": "ABC-01",
+        "comments": [
+            {
+                "comment_id": 12,
+                "comment_text": "Test",
+                "user_id": 33,
+                "status": 1,
+                "file_path": [
+                    "http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002"
+                ],
+                "comment_user": "Siva",
+                "user_image": "",
+                "parent_comment": 10,
+                "sub_parent": 11,
+                "ago_value": "an hour ago",
+                "date": "05:19 - 11 Oct",
+                "status_message": "New"
+            }
+        ],
+        "next_record": 23,
+        "previous_record": 19
+    }
+}
+
+================================================================
+
+12. Get file path
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_file_path
+
+Post values:
+file_id:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "File path fetched successfully",
+    "file_path": "http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/documents/2019-10-11/1570779914871-sample-(13).pdf"
+}
+
+==================================================================
+
+13. Get sub comment list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_sub_comments
+
+Post values:
+
+comment_id:45
+
+Response:
+
+{
+    "status": 1,
+    "message": "Sub comment list fetched successfully",
+    "details": [
+        {
+            "comment_id": 278,
+            "attachment_count": 0,
+            "comment_text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "user_id": 34,
+            "status": 1,
+            "comment_user": "SAS technoligies",
+            "user_image": "",
+            "parent_comment": 262,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "a day ago",
+            "date": "10:19 - 25 Nov",
+            "status_message": "New",
+            "sub_comment_count": 1,
+            "attachments": []
+        },
+        {
+            "comment_id": 280,
+            "attachment_count": 0,
+            "comment_text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
+            "user_id": 34,
+            "status": 1,
+            "comment_user": "SAS technoligies",
+            "user_image": "",
+            "parent_comment": 262,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "a day ago",
+            "date": "10:31 - 25 Nov",
+            "status_message": "New",
+            "sub_comment_count": 0,
+            "attachments": []
+        },
+        {
+            "comment_id": 283,
+            "attachment_count": 0,
+            "comment_text": "Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+            "user_id": 34,
+            "status": 1,
+            "comment_user": "SAS technoligies",
+            "user_image": "",
+            "parent_comment": 262,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "a day ago",
+            "date": "10:38 - 25 Nov",
+            "status_message": "New",
+            "sub_comment_count": 0,
+            "attachments": []
+        },
+        {
+            "comment_id": 284,
+            "attachment_count": 0,
+            "comment_text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            "user_id": 34,
+            "status": 1,
+            "comment_user": "SAS technoligies",
+            "user_image": "",
+            "parent_comment": 262,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "a day ago",
+            "date": "10:41 - 25 Nov",
+            "status_message": "New",
+            "sub_comment_count": 0,
+            "attachments": []
+        }
+    ]
+}
+
+
+==========================================================================================================
+
+
+ 14. Get file comment list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/get_file_comments
+
+
+Post values:
+
+file_id:96
+
+Response:
+
+{
+    "status": 1,
+    "message": "Invoice comments list fetched successfully",
+    "details": [
+        {
+            "comment_id": 260,
+            "attachment_count": 0,
+            "comment_text": "Hi, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English1.",
+            "user_id": 34,
+            "status": 1,
+            "comment_user": "SAS technoligies",
+            "user_image": "",
+            "parent_comment": 0,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "5 days ago",
+            "date": "10:38 - 21 Nov",
+            "status_message": "New",
+            "sub_comment_count": 2,
+            "attachments": []
+        },
+        {
+            "comment_id": 262,
+            "attachment_count": 0,
+            "comment_text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,",
+            "user_id": 29,
+            "status": 1,
+            "comment_user": "Sakthikumar",
+            "user_image": "",
+            "parent_comment": 0,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "5 days ago",
+            "date": "11:13 - 21 Nov",
+            "status_message": "New",
+            "sub_comment_count": 4,
+            "attachments": []
+        },
+        {
+            "comment_id": 266,
+            "attachment_count": 0,
+            "comment_text": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
+            "user_id": 29,
+            "status": 1,
+            "comment_user": "Sakthikumar",
+            "user_image": "",
+            "parent_comment": 0,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "5 days ago",
+            "date": "12:46 - 21 Nov",
+            "status_message": "New",
+            "sub_comment_count": 0,
+            "attachments": []
+        },
+        {
+            "comment_id": 271,
+            "attachment_count": 0,
+            "comment_text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+            "user_id": 34,
+            "status": 1,
+            "comment_user": "SAS technoligies",
+            "user_image": "",
+            "parent_comment": 0,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "5 days ago",
+            "date": "13:00 - 21 Nov",
+            "status_message": "New",
+            "sub_comment_count": 1,
+            "attachments": []
+        },
+        {
+            "comment_id": 274,
+            "attachment_count": 0,
+            "comment_text": "hello",
+            "user_id": 33,
+            "status": 1,
+            "comment_user": "Siva",
+            "user_image": "",
+            "parent_comment": 0,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "a day ago",
+            "date": "04:36 - 25 Nov",
+            "status_message": "New",
+            "sub_comment_count": 2,
+            "attachments": []
+        },
+        {
+            "comment_id": 292,
+            "attachment_count": 0,
+            "comment_text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            "user_id": 34,
+            "status": 1,
+            "comment_user": "SAS technoligies",
+            "user_image": "",
+            "parent_comment": 0,
+            "sub_parent": 0,
+            "attachments_list": "",
+            "file_path": [],
+            "ago_value": "3 hours ago",
+            "date": "10:55 - 26 Nov",
+            "status_message": "New",
+            "sub_comment_count": 1,
+            "attachments": []
+        }
+    ]
+}
+
+==================================================================================================================
+
+15. Get account type list
+
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/account_type_list  -----Post method
+
+Post values:
+sub_category_id:12
+
+Response:
+()
+{
+    "status": 1,
+    "message": "Account type list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "Bank"
+        },
+        {
+            "id": 2,
+            "name": "Accounts receivables"
+        },
+        {
+            "id": 3,
+            "name": "Other current asset"
+        },
+        {
+            "id": 4,
+            "name": "Fixed asset"
+        },
+        {
+            "id": 5,
+            "name": "Accounts payables"
+        },
+        {
+            "id": 6,
+            "name": "Other current liability"
+        },
+        {
+            "id": 7,
+            "name": "Long term liability"
+        },
+        {
+            "id": 8,
+            "name": "Equity "
+        },
+        {
+            "id": 9,
+            "name": "Other income"
+        },
+        {
+            "id": 10,
+            "name": "Cost of goods sold"
+        },
+        {
+            "id": 11,
+            "name": "Expenses"
+        },
+        {
+            "id": 12,
+            "name": "Other expenses"
+        },
+        {
+            "id": 13,
+            "name": "Income"
+        }
+    ]
+}
+
+===================================================================================================
+
+16. Default category list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/default_category_list  -- Get method
+
+Response:
+
+{
+    "status": 1,
+    "message": "Account name list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "DBS Bank - AUD",
+            "account_type_id": 1
+        },
+        {
+            "id": 2,
+            "name": "DBS Bank - EUR",
+            "account_type_id": 1
+        },
+        {
+            "id": 3,
+            "name": "DBS Bank - JPY",
+            "account_type_id": 1
+        },
+        {
+            "id": 4,
+            "name": "Accounts Receivable - AUD",
+            "account_type_id": 2
+        },
+        {
+            "id": 5,
+            "name": "Accounts Receivable - EUR",
+            "account_type_id": 2
+        }
+      
+    ]
+}
+
+=================================================================================================================
+
+17. Balance sheet category list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/balance_sheet_category_list  -- Get method
+
+
+Response:
+
+{
+    "status": 1,
+    "message": "Balance sheet category list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "DBS Bank - AUD",
+            "account_type_id": 1
+        },
+        {
+            "id": 2,
+            "name": "DBS Bank - EUR",
+            "account_type_id": 1
+        },
+        {
+            "id": 3,
+            "name": "DBS Bank - JPY",
+            "account_type_id": 1
+        },
+        {
+            "id": 4,
+            "name": "Accounts Receivable - AUD",
+            "account_type_id": 2
+        },
+        {
+            "id": 5,
+            "name": "Accounts Receivable - EUR",
+            "account_type_id": 2
+        }
+    ]
+}
+
+======================================================================
+18. Sub Account list
+
+http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com:9002/sub_account_list
+
+Post values:
+account_type_id:1
+
+Response:
+
+{
+    "status": 1,
+    "message": "Sub account list fetched successfully",
+    "list": [
+        {
+            "id": 1,
+            "name": "DBS Bank - AUD",
+            "account_type_id": 1
+        },
+        {
+            "id": 2,
+            "name": "DBS Bank - EUR",
+            "account_type_id": 1
+        },
+        {
+            "id": 3,
+            "name": "DBS Bank - JPY",
+            "account_type_id": 1
+        }
+    ]
+}
+
+======================================================================
